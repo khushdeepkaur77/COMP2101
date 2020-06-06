@@ -21,5 +21,13 @@
 
 echo "Setuid files:"
 echo "============="
-find / -type f -executable -perm -4000 -ls 2>/dev/null | sort -k 3
+find / -type f -executable -perm -4000 -ls 2>/dev/nul
+echo ""
+echo "Setgid files:"
+echo "============="
+find / -type f -executable -perm -2000 -ls 2>/dev/null | sort -k 6
+echo ""
+echo "The 10 largest regular files in the system:"
+echo "============="
+find / -type f -exec ls -alh 2>/dev/null --block-size=M {} \; | sort -hr -k5 | head | awk '{print $5, $3, $9}'
 echo ""
