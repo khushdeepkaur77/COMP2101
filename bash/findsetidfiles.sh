@@ -27,7 +27,7 @@ echo "Setgid files:"
 echo "============="
 find / -type f -executable -perm -2000 -ls 2>/dev/null | sort -k 6 # /dev/null for no error generators and ls 2> to find second listing
 echo "" # a blank line
-echo "The 10 largest regular files in the system:" # displaying the ten largest regular files in the system
+echo "The ten largest regular files in the system:" # displaying the ten largest regular files in the system
 echo "============="
 find / -type f -exec ls -alh 2>/dev/null --block-size=M {} \; |sort -hr -k5 | head | awk '{print $5, $3, $9}'# ls giving information about listing the files , --block-size=M tells their size in bytes and awk is used to display the output
 echo ""
