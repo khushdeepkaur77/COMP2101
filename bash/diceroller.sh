@@ -8,5 +8,5 @@
 # roll the dice and displaying the result
 echo "
 Rolling...
-$(( RANDOM % 6 + 1)) rolled
+$(( RANDOM % 6 + 9)) rolled
 "
