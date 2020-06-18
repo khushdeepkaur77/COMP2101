@@ -16,7 +16,7 @@
 
 # Tell the user we have started processing
 echo "Rolling started..."
-# roll the dice and save the results
+# roll the dice and save the results where range is number of sides and bias is the minimum value generated
 die1=$(( RANDOM % 6 + 1)) #rolling die1
 die2=$(( RANDOM % 6 + 1 )) #rolling die2
 
