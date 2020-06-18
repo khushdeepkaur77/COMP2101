@@ -15,9 +15,16 @@
 #  display a summary of what was rolled, and what the results of your arithmetic were
 
 # Tell the user we have started processing
-echo "Rolling..."
+echo "Rolling started..."
 # roll the dice and save the results
-die1=$(( RANDOM % 6 + 1))
-die2=$(( RANDOM % 6 + 1 ))
-# display the results
-echo "Rolled $die1, $die2"
+die1=$(( RANDOM % 6 + 1)) #rolling die1
+die2=$(( RANDOM % 6 + 1 )) #rolling die2
+
+# generating the sum of the die
+sum=$(( die1 + die2 ))
+# generating the average of the die
+average=$(( sum/2 ))
+
+# displaying the summary which vlaues has been rolled and showing the results of arithmetic
+echo "Rolling $die1, $die2 and sum is equales to $sum"
+echo "Rolling $die1, $die2 and an average is equales to $average"
