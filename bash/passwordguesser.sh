@@ -27,12 +27,14 @@ else
  else
    echo "Enter password again."
    read -s -p "Enter a password guess:" myString
+   
  if [ $myString = $referenceString ]; then
    echo "The password is correct."
    echo
  else
    echo "Enter password again."
    read -s -p "Enter a password guess:" myString
+
 	if [ $myString = $referenceString ]; then
   echo "The password is correct."
   echo
