@@ -73,7 +73,7 @@ for((K=1;K<=$interfacelist;K+=1));
 do
   interface=$(lshw -class network |
     awk '/logical name:/{print $3}' | awk -v P=$K 'NR==P{print $1; exit}')
-if [[ $interface == "lo" ]]
+if [[ $interface = "lo" ]]
   then
     continue
 fi
