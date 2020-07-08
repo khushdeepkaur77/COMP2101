@@ -18,7 +18,7 @@ test -f ~/Pictures/pics.tgz || wget -q -o ~/Pictures/pics.tgz https://zonzorp.ne
 # unpack the downloaded zipfile if it is there, then delete the local copy of the zipfile
 test -f ~/Pictures/pics.zip && unzip -d ~/Pictures -o -q ~/Pictures/pics.zip && rm ~/Pictures/pics.zip
 # retrieveing and erasing the old files kept in tarfile
-test -f ~/Pictures/pics.tgz && tar -xzf ~/Pictures/pics.tgz -C ~/POictures && rm ~/Pictures/pics.tgz
+test -f ~/Pictures/pics.tgz && tar -xzf ~/Pictures/pics.tgz -C ~/Pictures/pics && rm ~/Pictures/pics.tgz
 
 # Make a report on what we have in the Pictures directory
 test -d ~/Pictures && cat <<EOF
