@@ -26,23 +26,23 @@ presenttime=$(date +%I:%M\ %p)
 ###############
 #setting title on monday
 if [ "$Aday" = Monday ];then
-cows="Welcome to planet $hostname, Confident $User!"
+line="Welcome to planet $hostname, Confident $User!"
 #setting title on tuesday
 elif [ "$Aday" = Tuesday ];then
-cows="Welcome to planet $hostname, Pratical $User!"
+line="Welcome to planet $hostname, Pratical $User!"
 #setting title on wednesday
 elif [ "$Aday" = Wednesday ];then
-cows="Welcome to planet $hostname, Worrier $User!"
+line="Welcome to planet $hostname, Worrier $User!"
 #setting title on thursday
 elif [ "$Aday" = Thursday ];then
-cows="Welcome to planet $hostname, Respectful $User!"
+line="Welcome to planet $hostname, Respectful $User!"
 #setting title on friday
 elif [ "$Aday" = Friday ];then
-cows="Welcome to planet $hostname, Serious $User!"
+line="Welcome to planet $hostname, Serious $User!"
 #setting title on saturday
 elif [ "$Aday" = Saturday ];then
-cows="Welcome to planet $hostname, Strongest $User!"
+line="Welcome to planet $hostname, Strongest $User!"
 #setting title on sunday
-else cows="Welcome to planet $hostname, Truthful $User!"
+else line="Welcome to planet $hostname, Truthful $User!"
 fi
-Acowsay "$cows It is $presenttime on $Aday."
+cowsay "$line It is $presenttime on $Aday."
